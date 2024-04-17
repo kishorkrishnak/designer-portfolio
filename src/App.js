@@ -3,6 +3,7 @@ import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home/Home";
 import { createContext, useContext, useState } from "react";
+import './locomotive-scroll.css'
 const ThemeContext = createContext();
 
 function App() {

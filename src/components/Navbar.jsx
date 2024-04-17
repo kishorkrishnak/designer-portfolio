@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ModeSwitch from "./ModeSwitch";
 const Navbar = () => {
   return (
-    <div className="bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef] w-full h-fit z-40 font-ppmori text-[#111414]">
+    <div data-scroll-section className="bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef] w-full h-fit z-40 font-ppmori text-[#111414]">
       <div className="text-sm lg:text-lg p-4 md:p-6 md:px-10 m-auto w-full h-full flex justify-between items-center ">
         <Link className="hidden md:block" to="/">
           Dan Abrahamov

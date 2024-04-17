@@ -3,11 +3,11 @@ import DropALine from "./DropALine";
 
 const HeroSection = () => {
   return (
-    <section className="pt-[10rem] bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef]  md:pt-[16rem] px-4 lg:px-8 flex flex-col gap-[5.5rem] text-[#111414] font-ppmori">
-      <div className="gap-[2rem] flex flex-col md:flex-row justify-between items-end">
+    <section data-scroll-section className="pt-[10rem] bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef]  md:pt-[16rem] px-4 lg:px-8 flex flex-col gap-[5.5rem] text-[#111414] font-ppmori">
+      <div className="gap-[2rem] flex flex-col lg:flex-row justify-between lg:items-end">
         <h1 className="text-[17.8vw] leading-[0.9]">Digital Designer</h1>
 
-        <p className="text-md lg:text-lg  w-[100%] mr-12">
+        <p className="text-md lg:text-lg w-full max-w-[60%] lg:mr-12">
           specialized in Web Design, UX / UI, Webflow, and Front End
           Development.
         </p>

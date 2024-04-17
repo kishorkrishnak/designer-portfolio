@@ -25,7 +25,7 @@ const Services = () => {
     },
   ];
   return (
-    <section className="pt-[9rem] md:pt-[12rem] bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef] px-4 lg:px-8 flex flex-col gap-[5rem] font-ppmori text-[#111414]">
+    <section data-scroll-section className="pt-[9rem] md:pt-[12rem] bg-[#efefef] dark:bg-[#111414] dark:text-[#efefef] px-4 lg:px-8 flex flex-col gap-[5rem] font-ppmori text-[#111414]">
       <p className="w-full text-4xl md:text-[4vw]">I can help you <br className="md:hidden" /> with ...</p>
 
       <div className="flex justify-between items-center">
