@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./pages/Home/Home";
+import { createContext, useContext, useState } from "react";
+const ThemeContext = createContext();
 
 function App() {
+  const theme = localStorage.getItem("theme") || "light";
+  const [colorTheme, setColorTheme] = useState(theme);
+
+  const contextValues = {
+    colorTheme,
+    setColorTheme,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={contextValues}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </ScrollToTop>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
+export const useThemeContext = () => useContext(ThemeContext);
 
 export default App;
